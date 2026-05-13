@@ -4,6 +4,7 @@
 A retro-style desktop note manager inspired by early 2000s Windows utility software.
 
 Built in Java using Swing with a classic Windows XP / old desktop utility aesthetic.
+<br>
 **Author: uxokpro1234**
 ---
 
