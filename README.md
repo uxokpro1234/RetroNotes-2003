@@ -40,20 +40,8 @@ The project deliberately avoids modern flat UI design in favor of a nostalgic de
 - Java 21  
 - Java Swing  
 - Object-Oriented Programming (OOP)  
-- Event-driven GUI architecture  
-
----
-
-## Project Structure
-
-
-src/
-├── Main.java
-└── note/
-├── Note.java
-└── NoteManager.java
-
-
+- Event-driven GUI architecture
+- 
 ---
 
 ## Architecture
@@ -74,9 +62,9 @@ The application cleanly separates:
 
 ---
 
-## Screenshot (UI Mockup)
+## UI Mockup
 
-
+```
 +---------------------------------------------------+
 | RETRONOTES 2003 |
 +---------------------------------------------------+
@@ -93,7 +81,7 @@ The application cleanly separates:
 +---------------------------------------------------+
 | READY |
 +---------------------------------------------------+
-
+```
 
 ---
 
