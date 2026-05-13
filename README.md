@@ -4,7 +4,7 @@
 A retro-style desktop note manager inspired by early 2000s Windows utility software.
 
 Built in Java using Swing with a classic Windows XP / old desktop utility aesthetic.
-
+**Author: uxokpro1234**
 ---
 
 ## Features
@@ -113,13 +113,10 @@ The application cleanly separates:
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/RetroNotes2003.git
+git clone https://github.com/uxokpro1234/RetroNotes-2003.git
 ```
 Open the project in IntelliJ IDEA (or any Java IDE).
 
-Run:
-
-Main.java
 Why This Project Exists
 
 RetroNotes 2003 was created as a learning project focused on:
@@ -132,10 +129,6 @@ Desktop application design
 
 while also recreating the feel of early 2000s desktop software.
 
-License
-
-MIT License
-
-Author
+License: MIT License
 
 Made with questionable UI decisions and excessive nostalgia.
