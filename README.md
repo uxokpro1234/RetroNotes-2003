@@ -1,11 +1,13 @@
 # RetroNotes 2003
 
 <img src="retronotes.png" width = 50%>
+
+**Author: uxokpro1234**
+
 A retro-style desktop note manager inspired by early 2000s Windows utility software.
 
 Built in Java using Swing with a classic Windows XP / old desktop utility aesthetic.
 <br>
-**Author: uxokpro1234**
 ---
 
 ## Features
