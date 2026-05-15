@@ -111,27 +111,10 @@ The application cleanly separates:
 
 ---
 
-## Running the Project
+## Build
+To build from source, follow these steps:
 
-Clone the repository:
-
-```bash
-git clone https://github.com/uxokpro1234/RetroNotes-2003.git
-```
-Open the project in IntelliJ IDEA (or any Java IDE).
-
-Why This Project Exists
-
-RetroNotes 2003 was created as a learning project focused on:
-
-Java GUI programming
-Swing layouts
-Event-driven systems
-Object-oriented architecture
-Desktop application design
-
-while also recreating the feel of early 2000s desktop software.
-
-License: MIT License
-
-Made with questionable UI decisions and excessive nostalgia.
+- Open a terminal and clone the repository using git clone https://github.com/uxokpro1234/RetroNotes-2003.
+- Go into this directory using cd <location of cloned repo>.
+- Run ./gradlew build on linux or macos or gradlew build on windows.
+- Get the mod file from the /build/libs folder.
