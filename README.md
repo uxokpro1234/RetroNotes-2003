@@ -12,15 +12,14 @@ Built in Java using Swing with a classic Windows XP / old desktop utility aesthe
 
 ## Features
 
+- Classic utility software aesthetic
+- Retro Windows-style UI
+- Status bar updates 
 - Create notes  
 - Edit existing notes  
 - Delete notes  
-- Real-time note viewer  
-- Retro Windows-style UI  
 - System log panel  
 - Toolbar buttons  
-- Status bar updates  
-- Classic utility software aesthetic  
 
 ---
 
