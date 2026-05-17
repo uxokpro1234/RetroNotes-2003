@@ -64,29 +64,6 @@ The application cleanly separates:
 
 ---
 
-## UI Mockup
-
-```
-+---------------------------------------------------+
-| RETRONOTES 2003 |
-+---------------------------------------------------+
-| [NEW] [DELETE] [SAVE] [INFO] |
-+-------------------+-------------------------------+
-| Stored Notes | Content Viewer |
-| | |
-| Homework | Finish Java GUI project |
-| Ideas | |
-| | |
-+-------------------+-------------------------------+
-| System Log |
-| [INFO] RetroNotes initialized... |
-+---------------------------------------------------+
-| READY |
-+---------------------------------------------------+
-```
-
----
-
 ## Current Features
 
 - Dynamic note creation  
