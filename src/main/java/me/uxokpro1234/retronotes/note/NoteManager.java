@@ -12,7 +12,8 @@ public class NoteManager {
     public int countNote() {
         return notes.size();
     }
-
+    
+    // WHY??? IG WE'LL NEVER KNOW <3
     public void setNotes(ArrayList<Note> notes) {
         this.notes = notes;
     }
