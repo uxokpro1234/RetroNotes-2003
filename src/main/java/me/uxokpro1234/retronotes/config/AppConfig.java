@@ -14,7 +14,7 @@ public class AppConfig {
     public static final int WINDOW_HEIGHT = 700;
 
     // COLORS
-    public static final Color BACKGROUND = new Color(192,192,192);
+    public static final Color BGCOL = new Color(192,192,192);
     public static final Color HEADER_BLUE = new Color(0,0,128);
     public static final Color NOTE_LIST_BG = new Color(245,245,245);
     public static final Color TEXT_AREA_BG = new Color(250,250,250);
@@ -23,7 +23,6 @@ public class AppConfig {
     //FONTS
     public static final Font UI_FONT = new Font("Tahoma", Font.PLAIN, 11);
     public static final Font TITLE_FONT = new Font("Arial", Font.BOLD, 28);
-
     public static final Font CONSOLE_FONT = new Font("Courier New", Font.PLAIN, 12);
 
     // BUTTONS
