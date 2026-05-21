@@ -9,6 +9,13 @@ public class NoteManager {
         notes = new ArrayList<>();
     }
 
+    public int countNote() {
+        return notes.size();
+    }
+
+    public void setNotes(ArrayList<Note> notes) {
+        this.notes = notes;
+    }
 
     public void addNote(Note note){
         notes.add(note);
