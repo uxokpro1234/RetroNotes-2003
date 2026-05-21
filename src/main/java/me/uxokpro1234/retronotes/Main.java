@@ -2,6 +2,7 @@ package me.uxokpro1234.retronotes;
 
 import me.uxokpro1234.retronotes.note.Note;
 import me.uxokpro1234.retronotes.note.NoteManager;
+import me.uxokpro1234.retronotes.config.AppConfig;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -23,26 +24,26 @@ public class Main {
         // NOTE MANAGER
         NoteManager noteManager = new NoteManager();
         // FRAME
-        JFrame frame = new JFrame("RetroNotes 2003 Professional Edition");
-        frame.setSize(950, 700);
+        JFrame frame = new JFrame(AppConfig.APP_NAME); /// AppConfig.APP_NAME
+        frame.setSize(AppConfig.WINDOW_WIDTH, AppConfig.WINDOW_HEIGHT); ///(AppConfig.WINDOW_WIDTH, AppConfig.WINDOW_HEIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.setResizable(false);
-        frame.getContentPane().setBackground(new Color(192,192,192));
+        frame.getContentPane().setBackground(AppConfig.BGCOL); /// AppConfig.BGCOL
 
         // FONTS
-        Font uiFont = new Font("Tahoma", Font.PLAIN, 11);
-        Font titleFont = new Font("Arial", Font.BOLD, 28);
-        Font consoleFont = new Font("Courier New", Font.PLAIN, 12);
+        Font uiFont = AppConfig.UI_FONT; ///AppConfig.UI_FONT;
+        Font titleFont = AppConfig.TITLE_FONT; ///AppConfig.TITLE_FONT;
+        Font consoleFont = AppConfig.CONSOLE_FONT; /// AppConfig.CONSOLE_FONT.getAttributes();
 
         // HEADER PANEL
         JPanel headerPanel = new JPanel(new BorderLayout());
-        headerPanel.setBackground(new Color(0,0,128));
+        headerPanel.setBackground(AppConfig.HEADER_BLUE); ///AppConfig.HEADER_BLUE
         headerPanel.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         JLabel title = new JLabel(" RETRONOTES 2003");
         title.setForeground(Color.WHITE);
         title.setFont(titleFont);
-        JLabel build = new JLabel("Build 1.0.3");
+        JLabel build = new JLabel(AppConfig.VERSION); /// AppConfig.VERSION
         build.setForeground(Color.WHITE);
         build.setFont(uiFont);
         build.setBorder(BorderFactory.createEmptyBorder(0,0,0,10));
@@ -70,7 +71,7 @@ public class Main {
         JButton deleteButton = new JButton("DELETE");
         JButton saveButton = new JButton("SAVE");
         JButton infoButton = new JButton("INFO");
-        Dimension buttonSize = new Dimension(90,25);
+        Dimension buttonSize = AppConfig.TOOLBAR_BUTTON_SIZE; ///AppConfig.TOOLBAR_BUTTON_SIZE;
         addButton.setPreferredSize(buttonSize);
         deleteButton.setPreferredSize(buttonSize);
         saveButton.setPreferredSize(buttonSize);
@@ -86,7 +87,7 @@ public class Main {
         DefaultListModel<String> listModel = new DefaultListModel<>();
         JList<String> noteList = new JList<>(listModel);
         noteList.setFont(uiFont);
-        noteList.setBackground(new Color(245,245,245));
+        noteList.setBackground(AppConfig.NOTE_LIST_BG); /// AppConfig.NOTE_LIST_BG
         JScrollPane listScrollPane = new JScrollPane(noteList);
         listScrollPane.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Stored Notes"));
 
@@ -98,7 +99,7 @@ public class Main {
         // TEXT AREA
         JTextArea textArea = new JTextArea();
         textArea.setFont(consoleFont);
-        textArea.setBackground(new Color(250,250,250));
+        textArea.setBackground(AppConfig.TEXT_AREA_BG);
         textArea.setCaretColor(Color.BLACK);
         JScrollPane textScrollPane = new JScrollPane(textArea);
         textScrollPane.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Content Viewer"));
@@ -118,7 +119,7 @@ public class Main {
         logArea.setEditable(false);
         logArea.setFont(consoleFont);
         logArea.setBackground(Color.BLACK);
-        logArea.setForeground(new Color(0,255,0));
+        logArea.setForeground(AppConfig.LOG_GREEN); ///AppConfig.LOG_GREEN;
         logArea.append("[INFO] RetroNotes initialized...\n");
         logArea.append("[INFO] Ready.\n");
         JScrollPane logScroll = new JScrollPane(logArea);
@@ -174,6 +175,7 @@ public class Main {
         helpMenu.add(aboutItem);
 
         // BUTTON LOGIC
+        // ADD
         addButton.addActionListener(e -> {
 
             String titleText = titleField.getText();
@@ -200,6 +202,7 @@ public class Main {
             textArea.setText("");
         });
 
+        // DELETE
         deleteButton.addActionListener(e -> {
 
             int selected = noteList.getSelectedIndex();
@@ -215,7 +218,9 @@ public class Main {
             }
         });
 
+        // SAVE
         saveButton.addActionListener(e -> {
+            System.out.println(noteManager.countNote());
 
             int selected = noteList.getSelectedIndex();
 
@@ -227,7 +232,6 @@ public class Main {
                 listModel.set(selected,note.title);
                 logArea.append("[SAVE] Updated note: "+ note.title+ "\n");
                 statusBar.setText(" Saved: "+ note.title);
-
                 JOptionPane.showMessageDialog(
                         frame,
                         "Note updated successfully.",
@@ -237,6 +241,7 @@ public class Main {
             }
         });
 
+        // INFO
         infoButton.addActionListener(e -> {
             JOptionPane.showMessageDialog(frame,
                     "RetroNotes 2003\nBuild 1.0.3\n\nClassic desktop note manager.",
@@ -258,6 +263,7 @@ public class Main {
             }
         });
 
+        // NEW NOTE
         newNoteItem.addActionListener(e -> {
 
             titleField.setText("");
